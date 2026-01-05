@@ -3,6 +3,7 @@ try:
 except:
     import os
     os.system("pip3 install requests")
+    print("Warning: This uses the requests library. To uninstall, please run pip3 uninstall requests.")
     import requests
 class weather:
     def __init__(self, api_key, zip_code):
@@ -26,4 +27,5 @@ class weather:
             else:
                 return f'Failed to retrieve weather information. Status code: {response.status_code}'
         except Exception as e:
+
             return f'An error occurred: {str(e)}'
